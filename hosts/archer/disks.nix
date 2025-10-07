@@ -38,8 +38,6 @@ in
                 name = "crypted";
                 # disable settings.keyFile if you want to use interactive password entry
                 passwordFile = "/tmp/secret.key"; # Interactive
-                keylocation = "prompt";
-                keyformat = "passphrase";
                 settings = {
                   allowDiscards = true;
                   #keyFile = "/tmp/secret.key";

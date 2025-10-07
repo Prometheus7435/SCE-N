@@ -32,14 +32,21 @@ echo "         This is a destructive operation"
 echo
 read -p "Are you sure? [y/N]" -n 1 -r
 echo
+
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo true
 
-    sudo nix run github:nix-community/disko \
-	 --extra-experimental-features 'nix-command flakes' \
-	 --no-write-lock-file \
+    # sudo nix run github:nix-community/disko/latest \
+    # 	 --extra-experimental-features 'nix-command flakes' \
+    # 	 --no-write-lock-file \
+    # 	 -- \
+    # 	 --mode zap_create_mount \
+    # 	 "hosts/${TARGET_HOST}/disks.nix"
+
+    sudo nix --experimental-features "nix-command flakes" \
+	 run github:nix-community/disko/latest \
 	 -- \
-	 --mode zap_create_mount \
+	 --mode destroy,format,mount \
 	 "hosts/${TARGET_HOST}/disks.nix"
 
     sudo nixos-install --no-root-password --flake ".#${TARGET_HOST}"

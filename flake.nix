@@ -14,7 +14,7 @@
     # };
 
     disko = {
-      url = "github:nix-community/disko";
+      url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
@@ -49,7 +49,7 @@
       stateVersion = "25.11";
     in {
       nixosConfigurations = {
-        akira = nixpkgs.lib.nixosSystem {
+        archer = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
             inherit inputs outputs stateVersion;
