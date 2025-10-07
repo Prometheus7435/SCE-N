@@ -58,7 +58,7 @@
             hostname = "archer";
             username = "shyfox";
           };
-          stateVersion = stateversion;
+          stateVersion = stateVersion;
           modules = [
             ./hosts
             ./users
