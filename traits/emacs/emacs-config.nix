@@ -90,8 +90,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    # applications needed for the emacs packages to hook into
-    texlive.combined.scheme-full
+    # texlive.combined.scheme-full
     # nixfmt-classic
     ispell
     aspell

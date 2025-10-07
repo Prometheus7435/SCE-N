@@ -35,16 +35,6 @@
       pulse.enable = true;
       wireplumber.enable = true;
     };
-
-    # printing cups
-    # printing.enable = true;
-    # printing.drivers = with pkgs; [ gutenprint hplipWithPlugin ];
-    # avahi = {
-    #   enable = true;
-    #   nssmdns4 = true;
-    # };
-
-    # flatpak.enable = true;
   };
 
   environment.systemPackages = [
@@ -61,11 +51,5 @@
 
   hardware = {
     # pulseaudio.enable = false;
-
-    # scanning support
-    # sane = {
-    #   enable = true;
-    #   extraBackends = with pkgs; [ hplipWithPlugin sane-airscan ];
-    # };
   };
 }

@@ -7,7 +7,8 @@
     ./tailscale.nix
     ./tmux.nix
 
-    ./console
+    # ./console
+    ./emacs/emacs-config.nix
   ];
 
   environment.systemPackages = with pkgs; [

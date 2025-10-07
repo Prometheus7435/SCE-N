@@ -11,7 +11,7 @@ in
   # ++ lib.optional (builtins.isString desktop) ./packages-desktop.nix;
 
   users.users.${username} = {
-    description = "generic user setup for all my machines";
+    description = "Zach";
     extraGroups = [
         "audio"
         "disk"
@@ -22,6 +22,7 @@ in
         "users"
         "video"
         "wheel"
+        "nextcloud"
       ]
       ++ ifExists [
         "docker"
