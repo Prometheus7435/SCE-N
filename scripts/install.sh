@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 ## scripts/install.sh <hostname> <username>
-## Ex. sh scripts/install.sh starbase starfleet
+## Ex. sh scripts/install.sh archer shyfox
 
 set -euo pipefail
 
@@ -17,7 +17,7 @@ fi
 pushd "$HOME/Zero/nix-config"
 
 if [ ! -e "hosts/${TARGET_HOST}/disks.nix" ]; then
-  echo "ERROR! $(basename "${0}") could not find the required nixos/${TARGET_HOST}/disks.nix"
+  echo "ERROR! $(basename "${0}") could not find the required hosts/${TARGET_HOST}/disks.nix"
   exit 1
 fi
 
