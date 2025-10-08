@@ -52,7 +52,7 @@
         archer = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
-            inherit inputs outputs stateVersion;
+            inherit inputs outputs;
             desktop = "hyperland";
             hostid = "1a74db91"; # head -c 8 /etc/machine-id
             hostname = "archer";
@@ -67,13 +67,16 @@
         };
       };
 
+      # Standalone home-manager configuration entrypoint
+      # Available through 'home-manager --flake .#your-username@your-hostname'
       homeConfigurations = {
-        "shyfox" = home-manager.lib.homeManagerConfiguration {
+        "shyfox@archer" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = {
             inherit inputs outputs;
             desktop = "hyperland";
             username = "shyfox";
+            stateVersion = state_version;
           };
           modules = [
             ./home
