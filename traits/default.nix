@@ -8,7 +8,7 @@
     ./tmux.nix
 
     # ./console
-    ./emacs/emacs-config.nix
+    ./emacs
   ];
 
   environment.systemPackages = with pkgs; [

@@ -5,26 +5,23 @@
 
 set -euo pipefail
 
-TARGET_HOST="${1:-}"
+TARGET_HOST="${1:-archer}"
 TARGET_USER="${2:-shyfox}"
 
 GIT_REPO="Prometheus7435/SCE-N.git"
+CONFIG_FOLDER=".SCE-N"
 
-if [ ! -d "$HOME/Zero/nix-config/.git" ]; then
-  git clone "https://github.com/$GIT_REPO" "$HOME/Zero/nix-config"
+if [ ! -d "$HOME/${CONFIG_FOLDER}/.git" ]; then
+  git clone "https://github.com/$GIT_REPO" "$HOME/${CONFIG_FOLDER}"
 fi
 
-pushd "$HOME/Zero/nix-config"
+# pushd "$HOME/.SCE-N"
+pushd "$HOME/${CONFIG_FOLDER}"
 
 if [ ! -e "hosts/${TARGET_HOST}/disks.nix" ]; then
   echo "ERROR! $(basename "${0}") could not find the required hosts/${TARGET_HOST}/disks.nix"
   exit 1
 fi
-
-# if [ "$(id -u)" -eq 0 ]; then
-#   echo "ERROR! $(basename "${0}") should be run as a regular user"
-#   exit 1
-# fi
 
 echo "WARNING! The disks in ${TARGET_HOST} are about to get wiped"
 echo "         NixOS will be re-installed"
@@ -36,13 +33,6 @@ echo
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     sudo true
 
-    # sudo nix run github:nix-community/disko/latest \
-    # 	 --extra-experimental-features 'nix-command flakes' \
-    # 	 --no-write-lock-file \
-    # 	 -- \
-    # 	 --mode zap_create_mount \
-    # 	 "hosts/${TARGET_HOST}/disks.nix"
-
     sudo nix --experimental-features "nix-command flakes" \
 	 run github:nix-community/disko/latest \
 	 -- \
@@ -53,12 +43,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     # Rsync my nix-config to the target install
     # mkdir -p ~/.local/state/nix/profiles
-    mkdir -p "/mnt/home/${TARGET_USER}/Zero/nix-config"
+    mkdir -p "/mnt/home/${TARGET_USER}/${CONFIG_FOLDER}"
     # rsync -a --delete "${PWD}/" "/mnt/home/${TARGET_USER}/Zero/nix-config/"
 
     # Rsync nix-config to the target install and set the remote origin to SSH.
-    rsync -a --delete "$HOME/Zero/" "/mnt/home/$TARGET_USER/Zero/"
-    pushd "/mnt/home/$TARGET_USER/Zero/nix-config"
+    rsync -a --delete "$HOME/${CONFIG_FOLDER}/" "/mnt/home/$TARGET_USER/${CONFIG_FOLDER}/"
+    pushd "/mnt/home/$TARGET_USER/${CONFIG_FOLDER}"
     # git remote set-url origin git@github.com:Prometheus7435/SCE-N.git
     git remote set-url origin "git@github.com:$GIT_REPO"
     popd

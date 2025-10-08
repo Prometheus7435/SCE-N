@@ -1,6 +1,6 @@
 {
   description =
-    "My NixOS config that's 'inspired' from Wimpy's NixOS and Home Manager Configuration basing from the nix-starter-config";
+    "My NixOS config that's a (mostly) fresh start.";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -41,12 +41,12 @@
   }:
     let
       inherit (self) outputs;
-      forAllSystems = nixpkgs.lib.genAttrs [
-        # "aarch64-linux"
-        "x86_64-linux"
-      ];
+      # forAllSystems = nixpkgs.lib.genAttrs [
+      #   # "aarch64-linux"
+      #   "x86_64-linux"
+      # ];
       # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-      stateVersion = "25.11";
+      state_version = "25.11";
     in {
       nixosConfigurations = {
         archer = nixpkgs.lib.nixosSystem {
@@ -54,14 +54,14 @@
           specialArgs = {
             inherit inputs outputs stateVersion;
             desktop = "hyperland";
-            hostid = "1a74de91"; # head -c 8 /etc/machine-id
+            hostid = "1a74db91"; # head -c 8 /etc/machine-id
             hostname = "archer";
             username = "shyfox";
           };
-          stateVersion = stateVersion;
+          stateVersion = state_version;
           modules = [
             ./hosts
-            ./users
+            # ./users
             # nur.nixosModules.nur
           ];
         };
