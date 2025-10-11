@@ -36,6 +36,14 @@
 
   system = {
     stateVersion = stateVersion;
+    # autoUpgrade = {
+    #   enable = true;
+    #   allowReboot = false;
+    #   flake = "${HOME}/Zero/nix-config" #inputs.self.outPath;
+    #   flags = [
+    #     "-L" # print build logs
+    #   ];
+    # };
   };
 
   boot = {
