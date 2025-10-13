@@ -1,5 +1,5 @@
 # device = "/dev/nvme0n1";
-{ config, inputs, username, ...}:
+# { config, inputs, username, ...}:
 
 let
   btrfsopt = [
@@ -54,7 +54,7 @@ in
                       mountOptions = btrfsopt;
                     };
                     "/user" = {
-                      mountpoint = "/home/${username}";
+                      mountpoint = "/home/archer";
                       mountOptions = btrfsopt;
                     };
                     "/persist" = {
