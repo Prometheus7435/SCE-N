@@ -59,7 +59,7 @@
             hostname = "archer";
             username = "shyfox";
           };
-          stateVersion = stateVersion;
+          # stateVersion = stateVersion;
           modules = [
             ./hosts
             # ./users
@@ -78,7 +78,7 @@
             inherit stateVersion;
             desktop = "hyperland";
             username = "shyfox";
-            stateVersion = stateVersion;
+            # stateVersion = stateVersion;
           };
           modules = [
             ./home
