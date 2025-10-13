@@ -4,7 +4,7 @@
 # RAM: 16GB
 # NVME:
 
-{ config, inputs, lib, pkgs, username, modulesPath, cpu-arch, ... }:
+{ config, inputs, lib, pkgs, username, modulesPath, desktop, ... }:
 let
   # pkgs = import <nixpkgs> {
   #   overlays = [
@@ -20,13 +20,14 @@ in
     ./disks.nix
     # ../default.nix
 
-    ../traits/desktop/hyperland.nix
+    # ../traits/desktop/${desktop}.nix
     # ../_mixins/services/nfs/client.nix
     ../traits/mobile.nix
 
     # ../_mixins/services/pipewire.nix
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
+  ++ lib.optional (builtins.isString desktop) ../traits/desktop;
 
   boot = {
     supportedFilesystems = [ "zfs" ];
