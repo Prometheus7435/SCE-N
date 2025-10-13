@@ -1,5 +1,5 @@
 # device = "/dev/nvme0n1";
-{ username, ...}:
+{ config, inputs, username, ...}:
 
 let
   btrfsopt = [
