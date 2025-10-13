@@ -47,7 +47,7 @@
       # ];
       # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
       stateVersion = "25.11";
-    in {
+    in rec {
       nixosConfigurations = {
         archer = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";

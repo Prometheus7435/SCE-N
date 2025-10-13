@@ -34,6 +34,7 @@ read -p "Are you sure? [y/N]" -n 1 -r
 if [[ $REPLY =~ ^[Yy]$ ]]; then
 
     # create file with user entered password for disk encryption
+    echo
     echo "enter disk password"
     read diskpass
     echo diskpass >> /tmp/secret.key
