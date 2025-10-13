@@ -73,7 +73,7 @@
         "shyfox@archer" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = {
-            inherit inputs outputs;
+            # inherit inputs outputs;
             desktop = "hyperland";
             username = "shyfox";
             stateVersion = state_version;
