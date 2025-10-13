@@ -46,7 +46,7 @@
       #   "x86_64-linux"
       # ];
       # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-      state_version = "25.11";
+      stateVersion = "25.11";
     in {
       nixosConfigurations = {
         archer = nixpkgs.lib.nixosSystem {
@@ -54,7 +54,7 @@
           specialArgs = {
             # inherit inputs outputs;
             desktop = "hyperland";
-            hostid = "1a74db91"; # head -c 8 /etc/machine-id
+            hostid = "e7e4831e"; # head -c 8 /etc/machine-id
             hostname = "archer";
             username = "shyfox";
           };
@@ -76,7 +76,7 @@
             # inherit inputs outputs;
             desktop = "hyperland";
             username = "shyfox";
-            stateVersion = state_version;
+            stateVersion = stateVersion;
           };
           modules = [
             ./home

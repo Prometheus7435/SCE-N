@@ -18,7 +18,7 @@ in
   imports = [
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen
     ./disks.nix
-    ../default.nix
+    # ../default.nix
 
     ../traits/desktop/hyperland.nix
     # ../_mixins/services/nfs/client.nix
