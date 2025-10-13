@@ -11,6 +11,8 @@ TARGET_USER="${2:-shyfox}"
 GIT_REPO="Prometheus7435/SCE-N.git"
 CONFIG_FOLDER=".SCE-N"
 
+# diskpass=""
+
 if [ ! -d "$HOME/${CONFIG_FOLDER}/.git" ]; then
   git clone "https://github.com/$GIT_REPO" "$HOME/${CONFIG_FOLDER}"
 fi
@@ -28,12 +30,15 @@ echo "         NixOS will be re-installed"
 echo "         This is a destructive operation"
 echo
 read -p "Are you sure? [y/N]" -n 1 -r
-echo "enter disk password"
-read diskpass
-echo diskpass >> /tmp/secret.key
-echo
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
+
+    # create file with user entered password for disk encryption
+    echo "enter disk password"
+    read diskpass
+    echo diskpass >> /tmp/secret.key
+    echo
+
     sudo true
 
     sudo nix --experimental-features "nix-command flakes" \
