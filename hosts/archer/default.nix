@@ -18,7 +18,7 @@ in
   imports = [
     inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen
     ./disks.nix
-    # ../default.nix
+    ../default.nix
 
     # ../traits/desktop/${desktop}.nix
     # ../_mixins/services/nfs/client.nix
@@ -27,7 +27,6 @@ in
     # ../_mixins/services/pipewire.nix
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
-  ++ lib.optional (builtins.isString desktop) ../traits/desktop;
 
   boot = {
     supportedFilesystems = [ "zfs" ];
