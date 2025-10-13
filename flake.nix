@@ -52,7 +52,7 @@
         archer = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
           specialArgs = {
-            inherit inputs outputs;
+            # inherit inputs outputs;
             desktop = "hyperland";
             hostid = "1a74db91"; # head -c 8 /etc/machine-id
             hostname = "archer";
