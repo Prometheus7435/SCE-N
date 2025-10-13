@@ -53,6 +53,7 @@
           system = "x86_64-linux";
           specialArgs = {
             # inherit inputs outputs;
+            inherit stateVersion
             desktop = "hyperland";
             hostid = "e7e4831e"; # head -c 8 /etc/machine-id
             hostname = "archer";
@@ -74,6 +75,7 @@
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = {
             # inherit inputs outputs;
+            inherit stateVersion
             desktop = "hyperland";
             username = "shyfox";
             stateVersion = stateVersion;
