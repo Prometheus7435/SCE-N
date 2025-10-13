@@ -1,4 +1,6 @@
 # device = "/dev/nvme0n1";
+{ username, ...}:
+
 let
   btrfsopt = [
     "compress=zstd"
@@ -51,6 +53,10 @@ in
                       mountpoint = "/";
                       mountOptions = btrfsopt;
                     };
+                    "/user" = {
+                      mountpoint = "/home/${username}";
+                      mountOptions = btrfsopt;
+                    };
                     "/persist" = {
                       mountpoint = "/persist";
                       mountOptions = btrfsopt;
@@ -61,7 +67,7 @@ in
                     };
                     "/swap" = {
                       mountpoint = "/.swapvol";
-                      swap.swapfile.size = "16G";
+                      swap.swapfile.size = "16G"; # for hibernate, "should" be equal to RAM
                     };
                   };
                 };
