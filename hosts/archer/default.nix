@@ -29,7 +29,7 @@ in
   ];
 
   boot = {
-    supportedFilesystems = [ "zfs" ];
+    # supportedFilesystems = [ "zfs" ];
     # zfs.requestEncryptionCredentials = true;
 
     kernelPackages = pkgs.linuxPackages_zen;
