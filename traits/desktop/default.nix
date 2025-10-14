@@ -7,7 +7,9 @@
   fonts = {
     fontDir.enable = true;
     packages = with pkgs; [
-      (nerdfonts.override { fonts = [ "FiraCode" "UbuntuMono"]; })
+      # (nerdfonts.override { fonts = [ "FiraCode" "UbuntuMono"]; })
+      nerd-fonts.FiraCode
+      nerd-fonts.UbuntuMono
       liberation_ttf
       work-sans
       source-code-pro
@@ -26,7 +28,7 @@
   };
 
   services = {
-    xserver.libinput.enable = true;
+    libinput.enable = true;
     pipewire = {
       enable = true;
       alsa.enable = true;
