@@ -22,7 +22,7 @@ in
 
     # ../traits/desktop/${desktop}.nix
     # ../_mixins/services/nfs/client.nix
-    ../traits/mobile.nix
+    ../../traits/mobile.nix
 
     # ../_mixins/services/pipewire.nix
     (modulesPath + "/installer/scan/not-detected.nix")
