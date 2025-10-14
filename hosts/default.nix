@@ -6,7 +6,7 @@
     (./. + "/${hostname}/disks.nix")
     (modulesPath + "/installer/scan/not-detected.nix")
 
-    ../users/${username} # importing user settings from main flake
+    ../users/${username}.nix # importing user settings from main flake
   ]
   # Only include desktop components if one is supplied.
   ++ lib.optional (builtins.isString desktop) ../traits/desktop;
