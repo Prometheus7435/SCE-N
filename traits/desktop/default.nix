@@ -15,7 +15,6 @@
       ibm-plex
       iosevka
       liberation_ttf
-      nerd-fonts.FiraCode
       # nerd-fonts.UbuntuMono
       # nerd-fonts._0xproto
       # nerd-fonts.droid-sans-mono
