@@ -8,12 +8,14 @@
     trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
   };
 
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true; # recommended for most users
-    xwayland.enable = true; # Xwayland can be disabled.
-    waybar.enable = true;
+  programs = {
     hyprlock.enable = true;
+    hyprland = {
+      enable = true;
+      withUWSM = true; # recommended for most users
+      xwayland.enable = true; # Xwayland can be disabled.
+    };
+    waybar.enable = true;
   };
 
   services = {
@@ -32,6 +34,7 @@
     hypridle
     hyprland-qt-support # for hyprland-qt-support
     hyprlang
+    hyprlock
     hyprpaper
     hyprpolkitagent
     hyprshot
