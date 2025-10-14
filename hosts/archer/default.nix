@@ -54,7 +54,7 @@ in
   nix.settings.system-features = [ "big-parallel" ];
 
   nixpkgs.hostPlatform = {
-    system = "x86_64-linux"
+    system = "x86_64-linux";
   };
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
