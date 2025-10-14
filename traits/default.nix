@@ -21,6 +21,7 @@
     home-manager
     htop
     killall
+    kitty
     libgccjit
     man-pages
     pciutils
