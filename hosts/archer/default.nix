@@ -74,7 +74,7 @@ in
   # Enable touchpad support (enabled default in most desktopManager).
   services = {
     # xserver.libinput.enable = true;
-    powerManagement.enable = true;
+    # powerManagement.enable = true;
     # tlp = {
     #   settings = {
     #     START_CHARGE_THRESH_BAT0 = "75";
