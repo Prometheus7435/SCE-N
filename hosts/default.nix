@@ -79,7 +79,7 @@
 
     #   ];
     };
-  };
+# };
 
   hardware = {
     opengl = {
