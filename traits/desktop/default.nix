@@ -8,15 +8,23 @@
     fontDir.enable = true;
     packages = with pkgs; [
       # (nerdfonts.override { fonts = [ "FiraCode" "UbuntuMono"]; })
-      nerd-fonts.FiraCode
-      nerd-fonts.UbuntuMono
-      liberation_ttf
-      work-sans
-      source-code-pro
+      cooper-hewitt
+      fira
       fira-code
       fira-code-symbols
-      fira
+      ibm-plex
+      iosevka
+      liberation_ttf
+      nerd-fonts.FiraCode
+      # nerd-fonts.UbuntuMono
+      # nerd-fonts._0xproto
+      # nerd-fonts.droid-sans-mono
       nerdfonts
+      powerline-fonts
+      source-code-pro
+      spleen
+      ubuntu_font_family
+      work-sans
     ];
   };
 
