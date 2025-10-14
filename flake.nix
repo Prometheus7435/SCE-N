@@ -28,6 +28,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    # NUR
+    # needed for vdhcoapp
+    nur.url = "github:nix-community/NUR";
   };
 
   outputs = {

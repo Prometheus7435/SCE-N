@@ -82,18 +82,14 @@
 # };
 
   hardware = {
-    opengl = {
-      enable = true;
-      # driSupport = true;
-      # driSupport32Bit = true;
-    };
-
     bluetooth.enable = true;
     bluetooth.settings = {
     };
+    graphics.enable = true;
   };
 
   services = {
+    libinput.enable = true;
     auto-cpufreq.enable = true;
 
     fwupd.enable = true;
