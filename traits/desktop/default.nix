@@ -18,13 +18,14 @@
       # nerd-fonts.UbuntuMono
       # nerd-fonts._0xproto
       # nerd-fonts.droid-sans-mono
-      nerdfonts
+      # nerdfonts
       powerline-fonts
       source-code-pro
       spleen
       ubuntu_font_family
       work-sans
-    ];
+    ]
+    ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   };
 
   programs = {
