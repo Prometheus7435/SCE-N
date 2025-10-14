@@ -1,4 +1,4 @@
-{ config, inputs, desktop, pkgs, ... }: {
+{ config, nur, inputs, desktop, pkgs, ... }: {
   imports = [
     # ../services/nextcloud/client.nix
     (./. + "/${desktop}.nix")
@@ -46,7 +46,7 @@
 
     # pkgs.calibre
 
-    config.nur.repos.wolfangaukang.vdhcoapp # to get it to work, you need to run path/to/net.downloadhelper.coapp install --user
+    pkgs.vdhcoapp # to get it to work, you need to run path/to/net.downloadhelper.coapp install --user
   ];
 
   hardware = {
