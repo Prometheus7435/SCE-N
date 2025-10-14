@@ -38,7 +38,8 @@
       emacs-overlay,
       disko,
       ...
-  }:
+  }@inputs:
+  # }:
     let
       inherit (self) outputs;
       # forAllSystems = nixpkgs.lib.genAttrs [
