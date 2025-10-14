@@ -4,7 +4,7 @@
 # RAM: 16GB
 # NVME:
 
-{ inputs, lib, pkgs, username, modulesPath, desktop, ... }:
+{ inputs, lib, pkgs, username, hostname, hostid, modulesPath, desktop, ... }:
 let
   # pkgs = import <nixpkgs> {
   #   overlays = [
