@@ -53,7 +53,7 @@
           system = "x86_64-linux";
           specialArgs = {
             # inherit inputs outputs;
-            inherit stateVersion;
+            inherit inputs outputs stateVersion;
             desktop = "hyperland";
             hostid = "e7e4831e"; # head -c 8 /etc/machine-id
             hostname = "archer";
