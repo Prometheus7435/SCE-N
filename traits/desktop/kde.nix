@@ -38,17 +38,22 @@
   };
 
   environment.systemPackages = with pkgs; [
-    libsForQt5.applet-window-buttons
-    libsForQt5.discover
-    libsForQt5.dragon
-    libsForQt5.filelight
-    libsForQt5.kalk
-    libsForQt5.kfind
-    libsForQt5.plasma-integration
-    libsForQt5.xdg-desktop-portal-kde
-    libsForQt5.kdecoration
-    libsForQt5.qtstyleplugin-kvantum
-    okular
-    kate
+    kdePackages.applet-window-buttons6
+    kdePackages.baloo
+    kdePackages.discover
+    kdePackages.dragon
+    kdePackages.filelight
+    kdePackages.kalk
+    kdePackages.kdeconnect-kde
+    kdePackages.kdecoration
+    kdePackages.kdeplasma-addons
+    kdePackages.kfind
+    kdePackages.okular
+    kdePackages.plasma-integration
+    kdePackages.plasma-pa
+    kdePackages.qtstyleplugin-kvantum
+    kdePackages.xdg-desktop-portal-kde
+    kdePackages.yakuake
+    kdePackages.kate
   ];
 }
