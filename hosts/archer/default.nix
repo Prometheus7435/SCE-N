@@ -29,24 +29,12 @@ in
   ];
 
   boot = {
-    # supportedFilesystems = [ "zfs" ];
-    # zfs.requestEncryptionCredentials = true;
-
     kernelPackages = pkgs.linuxPackages_zen;
     # kernelParams = [ "nohibernate"];
 
     # extraModulePackages = with config.boot.kernelPackages; [
     #   # acpi_call
     # ];
-
-    # initrd = {
-    #   availableKernelModules = [
-
-    #   ];
-    #   kernelModules = [
-
-    #   ];
-    # };
   };
 
   swapDevices = [ ];
