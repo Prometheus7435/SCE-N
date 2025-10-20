@@ -13,7 +13,7 @@
 
   environment.systemPackages = with pkgs; [
     binutils
-    cpufrequtils  # allows turboing on cpu cores
+    # cpufrequtils  # allows turboing on cpu cores
     curl
     file
     git
