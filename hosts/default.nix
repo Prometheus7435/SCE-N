@@ -5,7 +5,7 @@
     (./. + "/${hostname}/default.nix")
     (./. + "/${hostname}/disks.nix")
     (modulesPath + "/installer/scan/not-detected.nix")
-
+    ../traits
     ../users/${username}.nix # importing user settings from main flake
   ]
   # Only include desktop components if one is supplied.
