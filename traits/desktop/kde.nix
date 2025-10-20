@@ -5,27 +5,27 @@
 
   services = {
     accounts-daemon.enable = true;
+    libinput.enable = true;
     xserver = {
       enable = true;
       xkb.layout = "us";
       # xkb.options = "grp:win_space_toggle";
 
       desktopManager = {
-        plasma5 = {
+        plasma6 = {
           enable = true;
+          enableQt5Integration = true;
+          # notoPackage = true;
         };
-      };
 
-      displayManager = {
         lightdm.enable = true;  # lets me autoLogin after decrypting zfs
-        defaultSession = "plasmawayland";
+        defaultSession = "plasma";
         autoLogin = {
           enable = true;
           user = "${username}";
         };
       };
     };
-
   };
 
   programs = {
