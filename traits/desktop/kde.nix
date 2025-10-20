@@ -5,26 +5,28 @@
 
   services = {
     accounts-daemon.enable = true;
+    desktopManager = {
+      plasma6 = {
+        enable = true;
+        enableQt5Integration = true;
+        # notoPackage = true;
+      };
+    };
+    displayManager = {
+      autoLogin = {
+        enable = true;
+        user = "${username}";
+      };
+      defaultSession = "plasma";
+      sddm.wayland.enable = true;
+    };
+
     libinput.enable = true;
+
     xserver = {
       enable = true;
       xkb.layout = "us";
-      # xkb.options = "grp:win_space_toggle";
-
-      desktopManager = {
-        plasma6 = {
-          enable = true;
-          enableQt5Integration = true;
-          # notoPackage = true;
-        };
-
-        lightdm.enable = true;  # lets me autoLogin after decrypting zfs
-        defaultSession = "plasma";
-        autoLogin = {
-          enable = true;
-          user = "${username}";
-        };
-      };
+      xkb.options = "grp:win_space_toggle";
     };
   };
 
