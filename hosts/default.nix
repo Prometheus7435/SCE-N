@@ -90,7 +90,7 @@
 
   services = {
     libinput.enable = true;
-    auto-cpufreq.enable = true;
+    # auto-cpufreq.enable = true;
 
     fwupd.enable = true;
 
