@@ -35,13 +35,6 @@
   };
   programs.home-manager.enable = true;
 
-  home = {
-    username = username;
-    homeDirectory = "/home/${username}";
-    sessionPath = [ "$HOME/.local/bin" ];
-    # stateVersion = stateVersion;
-  };
-
   nixpkgs = {
     overlays = [
       inputs.emacs-overlay.overlay

@@ -81,7 +81,7 @@
           extraSpecialArgs = {
             # inherit inputs outputs;
             inherit stateVersion;
-            desktop = "hyperland";
+            desktop = "kde";
             username = "shyfox";
             # stateVersion = stateVersion;
           };
