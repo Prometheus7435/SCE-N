@@ -2,14 +2,14 @@
 {
   imports = [
     # ./console
-    ./emacs
-    ./fish.nix
-    ./git.nix
+    # ./emacs
+    # ./fish.nix
+    # ./git.nix
     ./locale.nix
-    ./nano.nix
+    # ./nano.nix
     ./openssh.nix
     ./tailscale.nix
-    ./tmux.nix
+    # ./tmux.nix
   ];
 
   environment.systemPackages = with pkgs; [
