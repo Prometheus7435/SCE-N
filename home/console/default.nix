@@ -1,7 +1,11 @@
 { pkgs, ... }: {
   imports = [
+    ./git.nix
     ./fish.nix
-    # ./git.nix
+    ./nano.nix
+    ./silly.nix
+    ./tmux.nix
+    ./tui.nix
   ];
 
   home = {

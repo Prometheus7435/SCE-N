@@ -2,7 +2,7 @@
 {
   imports = [
     ./console
-    # ./git.nix
+    ./emacs
   ]
   ++ lib.optional (builtins.isString desktop) ./desktop
   ++ lib.optional (builtins.isPath (./. + "/users/${username}")) ./users/${username};
