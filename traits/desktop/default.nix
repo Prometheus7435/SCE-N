@@ -1,4 +1,4 @@
-{ config, nur, inputs, desktop, pkgs, ... }: {
+{ config, inputs, desktop, pkgs, ... }: {
   imports = [
     # ../services/nextcloud/client.nix
     (./. + "/${desktop}.nix")
@@ -53,9 +53,7 @@
     # pkgs.chromium
     # pkgs.libreoffice
     # pkgs.thunderbird
-
     # pkgs.calibre
-
     pkgs.vdhcoapp # to get it to work, you need to run path/to/net.downloadhelper.coapp install --user
   ];
 

@@ -31,7 +31,7 @@
 
     # NUR
     # needed for vdhcoapp
-    nur.url = "github:nix-community/NUR";
+    # nur.url = "github:nix-community/NUR";
   };
 
   outputs = {
