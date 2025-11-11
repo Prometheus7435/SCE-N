@@ -51,7 +51,7 @@
       #   "x86_64-linux"
       # ];
       # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-      # stateVersion = "25.11";
+      stateVersion = "25.11";
     in rec {
       nixosConfigurations = {
         archer = nixpkgs.lib.nixosSystem {
@@ -64,7 +64,7 @@
             hostname = "archer";
             username = "shyfox";
           };
-          stateVersion = stateVersion;
+          stateVersion = "25.11";
           modules = [
             ./hosts
             # ./users
