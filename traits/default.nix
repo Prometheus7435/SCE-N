@@ -26,6 +26,7 @@
     kitty
     libgccjit
     man-pages
+    nano
     pciutils
     rar
     rsync

@@ -1,7 +1,5 @@
 { pkgs, ... }: {
-  environment.systemPackages = [
-    pkgs.nano
-  ];
+
   programs.nano = {
     enable = true;
     syntaxHighlight = true;

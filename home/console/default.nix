@@ -3,7 +3,7 @@
     ./git.nix
     ./fish.nix
     ./nano.nix
-    ./silly.nix
+    # ./silly.nix
     ./tmux.nix
     # ./tui.nix # mv to traits
   ];
