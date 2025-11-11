@@ -11,7 +11,7 @@
     username = username;
     homeDirectory = "/home/${username}";
     sessionPath = [ "$HOME/.local/bin" ];
-    # stateVersion = stateVersion;
+    stateVersion = stateVersion;
   };
 
   nixpkgs = {
