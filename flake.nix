@@ -58,13 +58,13 @@
           system = "x86_64-linux";
           specialArgs = {
             # inherit inputs outputs;
-            inherit inputs outputs;
+            inherit inputs outputs stateVersion;
             desktop = "kde";
             hostid = "e7e4831e"; # head -c 8 /etc/machine-id
             hostname = "archer";
             username = "shyfox";
           };
-          stateVersion = "25.11";
+          # stateVersion = "25.11";
           modules = [
             ./hosts
             # ./users

@@ -2,8 +2,6 @@
   imports = [
 
   ];
-  programs.acpi.enable = true;
-
 
   programs.tmux = {
     enable = true;
