@@ -2,9 +2,8 @@
   imports = [
 
   ];
-    environment.systemPackages = [
-      pkgs.acpi
-    ];
+  programs.acpi.enable = true;
+
 
   programs.tmux = {
     enable = true;

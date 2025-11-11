@@ -13,6 +13,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
+    acpi # used in tmux
     binutils
     cpufrequtils  # allows turboing on cpu cores
     curl
