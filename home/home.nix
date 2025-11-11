@@ -5,7 +5,7 @@
     ./emacs
   ]
   ++ lib.optional (builtins.isString desktop) ./desktop
-  ++ lib.optional (builtins.isPath (./. + "/users/${username}")) ./users/${username};
+  ++ lib.optional (builtins.isPath (./. + "/users/${username}")) ./users/${username}.nix;
 
   home = {
     username = username;
