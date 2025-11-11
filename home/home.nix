@@ -24,9 +24,9 @@
   programs.home-manager.enable = true;
 
   nixpkgs = {
-    overlays = [
-      inputs.emacs-overlay.overlay
-    ];
+    # overlays = [
+    #   inputs.emacs-overlay.overlay
+    # ];
     # Configure your nixpkgs instance
     config = {
       allowUnfree = true;
