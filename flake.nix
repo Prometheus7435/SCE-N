@@ -58,7 +58,7 @@
           system = "x86_64-linux";
           specialArgs = {
             # inherit inputs outputs;
-            inherit inputs outputs stateVersion;
+            inherit inputs outputs;
             desktop = "kde";
             hostid = "e7e4831e"; # head -c 8 /etc/machine-id
             hostname = "archer";
@@ -83,7 +83,7 @@
             inherit stateVersion;
             desktop = "kde";
             username = "shyfox";
-            # stateVersion = stateVersion;
+            stateVersion = "25.11";
           };
           modules = [
             ./home
