@@ -40,6 +40,7 @@
     packages = with pkgs; [
       # alejandra                     # Code format Nix
       # asciinema                     # Terminal recorder
+      acpi
       black                         # Code format Python
       bmon                          # Modern Unix `iftop`
       # breezy                        # Terminal bzr client
