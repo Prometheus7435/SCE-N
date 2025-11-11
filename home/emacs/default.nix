@@ -89,14 +89,4 @@
     );
   };
 
-  environment.systemPackages = with pkgs; [
-    # texlive.combined.scheme-full
-    # nixfmt-classic
-    ispell
-    aspell
-    black
-    python313Packages.jedi
-
-  ];
-
 }

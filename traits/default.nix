@@ -35,6 +35,14 @@
     usbutils
     wget
     yt-dlp
+
+    # emacs requirements
+    # texlive.# commentmbined.scheme-full
+    # nixfmt-classic
+    ispell
+    aspell
+    black
+    python313Packages.jedi
   ];
 
   programs = {
