@@ -83,7 +83,7 @@
             inherit stateVersion;
             desktop = "kde";
             username = "shyfox";
-            stateVersion = "25.11";
+            # stateVersion = "25.11";
           };
           modules = [
             ./home
