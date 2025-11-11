@@ -5,7 +5,7 @@
     ./nano.nix
     ./silly.nix
     ./tmux.nix
-    ./tui.nix
+    # ./tui.nix # mv to traits
   ];
 
   home = {
