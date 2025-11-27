@@ -4,6 +4,7 @@
     # ./dconf-editor.nix
     ./emote.nix
     # ./gitkraken.nix
+    ./librewolf.nix
     # ./meld.nix
     # ./tilix.nix
     # ../emacs/default.nix
