@@ -22,7 +22,8 @@
       powerline-fonts
       source-code-pro
       spleen
-      ubuntu_font_family
+      ubuntu-classic
+      ucs-fonts
       work-sans
     ]
     ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);

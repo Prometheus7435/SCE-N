@@ -6,7 +6,7 @@
 	  )
 			     ;; ("dnd" . "~/DND/")))
 
-;;    (package-initialize)
+;    (package-initialize)
 
 (when (not (package-installed-p 'use-package))
 	(package-refresh-contents)
@@ -111,11 +111,11 @@
 	 (defvar sync_folder "~/Sync/"))
 )
      )
-(defvar nix_folder "~/Zero/nix-config/")
+(defvar nix_folder "~/.SCE-N/")
 
 (defun zb/visit-emacs-config ()
 (interactive)
-(find-file (concat nix_folder "nixos/_mixins/base/emacs-config.org")))
+(find-file (concat nix_folder "traits/emacs/emacs-config.org")))
 (global-set-key (kbd "C-c e") 'zb/visit-emacs-config)
 
 (defun zb/visit-nixos-config ()

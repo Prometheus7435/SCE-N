@@ -2,7 +2,7 @@
   imports = [
     ./git.nix
     ./fish.nix
-    ./nano.nix
+    # ./nano.nix
     # ./silly.nix
     ./tmux.nix
     # ./tui.nix # mv to traits
@@ -32,7 +32,7 @@
       # dive                          # Container analyzer
       dogdns                        # Modern Unix `dig`
       duf                           # Modern Unix `df`
-      du-dust                       # Modern Unix `du`
+      dust                       # Modern Unix `du`
       entr                          # Modern Unix `watch`
       fd                            # Modern Unix `find`
       # ffmpeg-headless               # Terminal video encoder

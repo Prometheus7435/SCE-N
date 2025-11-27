@@ -4,6 +4,11 @@
   imports = [
 
   ];
+  nixpkgs = {
+    overlays = [
+      inputs.emacs-overlay.overlay
+    ];
+  };
 
   services.emacs = {
     enable = true;

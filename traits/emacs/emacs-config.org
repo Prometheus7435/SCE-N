@@ -12,7 +12,7 @@
 	  )
 			     ;; ("dnd" . "~/DND/")))
 
-;;    (package-initialize)
+;    (package-initialize)
 #+end_src
 
 ** Configure =use-package=
@@ -258,13 +258,13 @@ to the name of the current project:
 #+begin_src emacs-lisp
     (cond
        ((string-equal system-type "windows-nt")
-	(defvar sync_folder "C:/Users/zacha/sync/"))
+  	(defvar sync_folder "C:/Users/zacha/sync/"))
        (
-	(if my-laptop-p (string-equal system-type "gnu/linux")
-	 (defvar sync_folder "~/Sync/"))
+  	(if my-laptop-p (string-equal system-type "gnu/linux")
+  	 (defvar sync_folder "~/Sync/"))
   )
        )
-  (defvar nix_folder "~/Zero/nix-config/")
+  (defvar nix_folder "~/.SCE-N/")
 #+end_src
 
 ** Quickly visit Emacs configuration
@@ -275,7 +275,7 @@ Emacs configuration file.
 #+begin_src emacs-lisp
   (defun zb/visit-emacs-config ()
   (interactive)
-  (find-file (concat nix_folder "nixos/_mixins/base/emacs-config.org")))
+  (find-file (concat nix_folder "traits/emacs/emacs-config.org")))
   (global-set-key (kbd "C-c e") 'zb/visit-emacs-config)
 #+end_src
 
