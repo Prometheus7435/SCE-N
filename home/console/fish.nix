@@ -42,12 +42,12 @@
         # https://github.com/NixOS/nixpkgs/issues/191128#issuecomment-1246030417
         nix-hash-sha256 = "nix-hash --flat --base32 --type sha256";
         nix-gc = "sudo nix-collect-garbage --delete-older-than 14d";
-        rebuild-home = "home-manager boot -b backup --flake $HOME/Zero/nix-config";
-        rebuild-host = "sudo nixos-rebuild boot --flake $HOME/Zero/nix-config";
-        rebuild-lock = "pushd $HOME/Zero/nix-config && nix flake lock --recreate-lock-file && popd";
-        rebuild-iso = "pushd $HOME/Zero/nix-config && nix build .#nixosConfigurations.iso.config.system.build.isoImage && popd";
-        gitc = "sh $HOME/Zero/nix-config/home-manager/console/simple-git-commit.sh";
-        # "pushd ~/Zero/nix-config && git add . && git commit -m ";
+        rebuild-home = "home-manager boot -b backup --flake $HOME/.SCE-N";
+        rebuild-host = "sudo nixos-rebuild boot --flake $HOME/.SCE-N";
+        rebuild-lock = "pushd $HOME/.SCE-N && nix flake lock --recreate-lock-file && popd";
+        rebuild-iso = "pushd $HOME/.SCE-N && nix build .#nixosConfigurations.iso.config.system.build.isoImage && popd";
+        gitc = "sh $HOME/.SCE-N/home/console/simple-git-commit.sh";
+        # "pushd ~/.SCE-N && git add . && git commit -m ";
         ytd = "yt-dlp -o '%(title)s.%(ext)s'";
         yty = "yt-dlp -f 'bv*+ba[acodec=opus]/b[ext=mp4] / bv*+ba*/b' --cookies-from-browser Firefox --embed-metadata --sponsorblock-remove 'sponsor,selfpromo,preview,filler,interaction' -o '$HOME/Videos/webshows/%(channel)s [%(channel_id)s]/%(upload_date)s %(title)s/%(title)s [%(id)s].%(ext)s'";
         ytx = "yt-dlp -N 8 -o '$HOME/Videos/.WinX/new_downloads/%(title)s.%(ext)s'";
