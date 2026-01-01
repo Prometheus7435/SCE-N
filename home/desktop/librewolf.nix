@@ -15,6 +15,7 @@
             "privacy.clearOnShutdown.history" = false;
             "privacy.clearOnShutdown.cookies" = false;
             "network.cookie.lifetimePolicy" = 0;
+            "browser.startup.page" = 3; # restore from previous session
 	     };
        # ExtensionSettings = {
        #  "addon@darkreader.org" = {
