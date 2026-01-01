@@ -10,24 +10,29 @@
       };
     };
 
+    delta = {
+      enable = true;
+      options = {
+        features = "decorations";
+        navigate = true;
+        side-by-side = true;
+      };
+    };
+
     git = {
       enable = true;
-      userName = "Zach Bombay";
-      userEmail = "zacharybombay@gmail.com";
-      delta = {
-        enable = true;
-        options = {
-          features = "decorations";
-          navigate = true;
-          side-by-side = true;
+
+
+      settings = {
+        aliases = {
+          lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
         };
-      };
+        user = {
+          Name = "Zach Bombay";
+          Email = "zacharybombay@gmail.com";
+        };
 
-      aliases = {
-        lg = "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit";
-      };
-
-      extraConfig = {
+#      extraConfig = {
         push = {
           default = "matching";
         };
@@ -37,6 +42,7 @@
         init = {
           defaultBranch = "main";
         };
+ #     };
       };
 
       ignores = [
