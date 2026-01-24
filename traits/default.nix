@@ -25,6 +25,7 @@
     killall
     kitty
     libgccjit
+    lf
     man-pages
     nano
     pciutils

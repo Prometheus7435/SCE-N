@@ -44,8 +44,8 @@
 
       # Change prefix from 'Ctrl+b' to 'Ctrl+t'
       unbind C-b
-      set-option -g prefix C-t
-      bind-key C-t send-prefix
+      set-option -g prefix C-Enter
+      bind-key C-Enter send-prefix
 
       # Add battery
       # set -g status-right 'Batt: #{battery_icon} #{battery_percentage} #{battery_remain} | %a %h-%d %H:%M '

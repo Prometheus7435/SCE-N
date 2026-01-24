@@ -125,7 +125,7 @@
 
 (defun zb/visit-machine-nixos-config ()
 (interactive)
-(find-file (concat nix_folder "nixos/" (system-name) "/default.nix")))
+(find-file (concat nix_folder "hosts/" (system-name) "/default.nix")))
 (global-set-key (kbd "C-c m") 'zb/visit-machine-nixos-config)
 
 (defun zb/kill-current-buffer ()

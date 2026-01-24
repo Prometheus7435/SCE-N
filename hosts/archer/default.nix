@@ -43,11 +43,18 @@ in
 
   nixpkgs.hostPlatform = {
     system = "x86_64-linux";
+    # gcc.arch = "skylake"; # get build dependancy fail with this flag
+    # gcc.tune = "skylake";
   };
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   environment.systemPackages = with pkgs; [
+    fastfetch
+    yubikey-agent
+    yubikey-manager
+    yubikey-personalization
 
+    prusa-slicer
   ];
 
   hardware = {
@@ -95,4 +102,5 @@ in
       # ];
     };
   };
+
 }
