@@ -18,13 +18,11 @@ in
   imports = [
 #    inputs.nixos-hardware.nixosModules.lenovo-thinkpad-x1-9th-gen
     ./disks.nix
-    # ../default.nix
-
     # ../traits/desktop/${desktop}.nix
     # ../_mixins/services/nfs/client.nix
     ../../traits/mobile.nix
+    ../../traits/silly.nix
 
-    # ../_mixins/services/pipewire.nix
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
