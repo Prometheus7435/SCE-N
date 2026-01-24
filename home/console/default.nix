@@ -30,7 +30,7 @@
       difftastic                    # Modern Unix `diff`
       # distrobox                     # Terminal container manager
       # dive                          # Container analyzer
-      dogdns                        # Modern Unix `dig`
+      doggo                        # Modern Unix `dig`, switched from dogds as that is unmaintained
       duf                           # Modern Unix `df`
       dust                       # Modern Unix `du`
       entr                          # Modern Unix `watch`
