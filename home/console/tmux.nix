@@ -27,6 +27,10 @@
       # https://old.reddit.com/r/tmux/comments/mesrci/tmux_2_doesnt_seem_to_use_256_colors/
       set -g default-terminal "xterm-256color"
       set -ga terminal-overrides ",*256col*:Tc"
+
+      set-option -g extended-keys always
+      set -as terminal-features 'xterm*:extkeys'
+
 #      set -ga terminal-overrides '*:Ss=\E[%p1%d q:Se=\E[ q'
       set-environment -g COLORTERM "truecolor"
 
@@ -42,10 +46,10 @@
       set -g @catppuccin_flavor "mocha" # latte, frappe, macchiato, or mocha
       set -g @catppuccin_window_status_style "rounded" # basic, rounded, slanted, custom, or none
 
-      # Change prefix from 'Ctrl+b' to 'Ctrl+t'
+     # Change prefix from 'Ctrl+b' to 'Ctrl+t'
       unbind C-b
-      set-option -g prefix C-Enter
-      bind-key C-Enter send-prefix
+      set-option -g prefix C-t
+      bind-key C-t send-prefix
 
       # Add battery
       # set -g status-right 'Batt: #{battery_icon} #{battery_percentage} #{battery_remain} | %a %h-%d %H:%M '

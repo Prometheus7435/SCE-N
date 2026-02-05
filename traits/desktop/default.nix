@@ -51,7 +51,7 @@
   environment.systemPackages = [
     # pkgs.alacritty
     pkgs.vlc
-    # pkgs.chromium
+    pkgs.chromium
     # pkgs.libreoffice
     # pkgs.thunderbird
     # pkgs.calibre

@@ -54,7 +54,7 @@
       # maestral                      # Terminal Dropbox client
       mdp                           # Terminal Markdown presenter
       # mktorrent                     # Terminal torrent creator
-      moar                          # Modern Unix `less`
+      moor                          # Modern Unix `less`
       mtr                           # Modern Unix `traceroute`
       netdiscover                   # Modern Unix `arp`
       nethogs                       # Modern Unix `iftop`
