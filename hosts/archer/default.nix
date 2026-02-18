@@ -48,11 +48,23 @@ in
 
   environment.systemPackages = with pkgs; [
     fastfetch
-    yubikey-agent
+
+    # Yubikey
+#    yubikey-agent
     yubikey-manager
     yubikey-personalization
+    libfido2
+    pam-u2f
+    gnupg
+    pinentry
+    opensc
+    pcsclite
+    pcsc-tools
+
 
     prusa-slicer
+
+    profile-sync-daemon # for putting firefox data into ram
   ];
 
   hardware = {
