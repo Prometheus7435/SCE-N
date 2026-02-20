@@ -55,7 +55,7 @@
     # pkgs.libreoffice
     # pkgs.thunderbird
     # pkgs.calibre
-    pkgs.vdhcoapp # to get it to work, you need to run path/to/net.downloadhelper.coapp install --user
+    # pkgs.vdhcoapp # to get it to work, you need to run path/to/net.downloadhelper.coapp install --user
   ];
 
   hardware = {

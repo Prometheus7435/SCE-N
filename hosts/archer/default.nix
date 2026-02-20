@@ -50,13 +50,13 @@ in
     fastfetch
 
     # Yubikey
-#    yubikey-agent
+    yubikey-agent
     yubikey-manager
     yubikey-personalization
     libfido2
-    pam-u2f
+    pam_u2f
     gnupg
-    pinentry
+    pinentry-all
     opensc
     pcsclite
     pcsc-tools
@@ -64,7 +64,9 @@ in
 
     prusa-slicer
 
-    profile-sync-daemon # for putting firefox data into ram
+    # profile-sync-daemon # for putting firefox data into ram
+
+    wiki-tui
   ];
 
   hardware = {
