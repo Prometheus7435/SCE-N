@@ -63,7 +63,7 @@ in
 
 
     prusa-slicer
-
+    transmission_4-gtk
     # profile-sync-daemon # for putting firefox data into ram
 
     wiki-tui

@@ -20,7 +20,7 @@
         config = ./emacs-init.el;
         defaultInitFile = true;
         # package = pkgs.emacs-pgtk;
-        package = pkgs.emacs30;
+        package = pkgs.emacs31;
 
         # By default emacsWithPackagesFromUsePackage will only pull in
         # packages with `:ensure`, `:ensure t` or `:ensure <package name>`.

@@ -52,7 +52,7 @@
     # pkgs.alacritty
     pkgs.vlc
     pkgs.chromium
-    # pkgs.libreoffice
+    pkgs.libreoffice
     # pkgs.thunderbird
     # pkgs.calibre
     # pkgs.vdhcoapp # to get it to work, you need to run path/to/net.downloadhelper.coapp install --user

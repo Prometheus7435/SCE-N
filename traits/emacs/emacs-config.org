@@ -10,8 +10,6 @@
 			     ("nongnu" . "https://elpa.nongnu.org/nongnu/")
 			     )
 	  )
-			     ;; ("dnd" . "~/DND/")))
-
 ;    (package-initialize)
 #+end_src
 
@@ -76,7 +74,6 @@ packages on the server version than I do for my normal computers.
 #+end_src
 
 * Set personal information
-
 ** Who am I? Where am I?
 #+begin_src emacs-lisp
   (setq user-full-name "Zach Bombay"
@@ -90,6 +87,11 @@ packages on the server version than I do for my normal computers.
 ** Highlight Line Mode
 #+begin_src emacs-lisp
 (global-hl-line-mode 1)
+#+end_src
+** Relative Line Numbers
+#+begin_src emacs-lisp
+  (setq display-line-numbers-type `relative)
+  (global-display-line-numbers-mode 1)
 #+end_src
 
 ** Tweak window chrome
@@ -154,26 +156,6 @@ Line wrapping
   (global-visual-line-mode)
 #+end_src
 
-** SpaceLine
-Spacemacs themed mode-line
-# #+begin_src emacs-lisp
-# (use-package spaceline
-#   :ensure t
-#   :config
-#   (require 'spaceline-config)
-#     (setq spaceline-buffer-encoding-abbrev-p nil)
-#     (setq spaceline-line-column-p nil)
-#     (setq spaceline-line-p nil)
-#     (setq powerline-default-separator (quote arrow))
-#     (spaceline-spacemacs-theme))
-# #+end_src
-
-# remove the seperation between the spaceline bits
-
-# #+begin_src emacs-lisp
-# (setq powerline-default-separator nil)
-# #+end_src
-
 ** Use =moody= for a beautiful modeline
 
 This gives me a truly lovely ribbon-based modeline.
@@ -215,16 +197,6 @@ I'm partial to Source Code Pro.
     (setq zb/current-font-size zb/default-font-size)
 #+end_src
 
-** Frame name
-
-The default frame title isn't useful. This binds it
-to the name of the current project:
-
-#+begin_src emacs-lisp
-  (setq frame-title-format (system-name))
-;  (setq frame-title-format "%b")
-  ;; (setq frame-title-format '((:eval (projectile-project-name))))
-#+end_src
 ** UTF-8 complience
 
 #+begin_src emacs-lisp
@@ -256,14 +228,7 @@ to the name of the current project:
 * keybinding
 ** define sync folder
 #+begin_src emacs-lisp
-    (cond
-       ((string-equal system-type "windows-nt")
-  	(defvar sync_folder "C:/Users/zacha/sync/"))
-       (
-  	(if my-laptop-p (string-equal system-type "gnu/linux")
-  	 (defvar sync_folder "~/Sync/"))
-  )
-       )
+  (defvar sync_folder "~/Sync/")
   (defvar nix_folder "~/.SCE-N/")
 #+end_src
 
@@ -327,9 +292,6 @@ If you put in a completing pair (like these parenthasis or quotes), this will co
 			     (?\" . ?\")
 			     ))
   (setq electric-pair-inhibit-predicate (lambda (c) (char-equal c ?<)))
-  ;; (setq electric-pair-inhibit-predicate
-  ;;     `(lambda (c)
-  ;;        (if (char-equal c ?<) t (,electric-pair-inhibit-predicate c)))))
 #+end_src
 
 #+begin_src emacs-lisp
@@ -361,6 +323,17 @@ and the selected region expands. Repeat until the whole buffer is selected
 (use-package expand-region
   :ensure t
   :bind ("C-q" . er/expand-region))
+#+end_src
+
+** Yasnippet
+#+begin_src emacs-lisp
+  (use-package yasnippet
+    :ensure t
+    :config
+      (use-package yasnippet-snippets
+	:ensure t)
+      (yas-reload-all))
+(yas-global-mode t)
 #+end_src
 
 * Org-mode
@@ -466,7 +439,6 @@ Here's something based on a [[https://systemcrafters.net/build-a-second-brain-in
   )
 #+end_src
 
-
 * Test zone
 ** Org-Chef
 record and organize cooking recipes. Uses org-capture and can parse recipes from some sites
@@ -492,17 +464,6 @@ record and organize cooking recipes. Uses org-capture and can parse recipes from
    #   ;; (setq org-books-file (concat sync_folder "org/books.org"))
    #     ;; A basic template file can be generated using the function `org-books-create-file'.
    # #+end_src
-
-** Yasnippet
-#+begin_src emacs-lisp
-  (use-package yasnippet
-    :ensure t
-    :config
-      (use-package yasnippet-snippets
-	:ensure t)
-      (yas-reload-all))
-(yas-global-mode t)
-#+end_src
 
 ** Flycheck
 #+begin_src emacs-lisp
@@ -617,6 +578,11 @@ makes that automatic.
 #                     (org-agenda-overriding-header "ALL normal priority tasks:"))))
 #          ((org-agenda-compact-blocks t)))))
 # #+end_src
+
+** Elfeed
+#+begin_src emacs-lisp
+
+#+end_src
 
 * Programming
 ** Language Server
@@ -735,7 +701,6 @@ Displays the key bindings following your currently entered incomplete command (a
 # #+begin_src emacs-lisp
 #   (which-key-setup-side-window-right)
 # #+end_src
-
 
 * INI-Mode
 #+begin_src emacs-lisp

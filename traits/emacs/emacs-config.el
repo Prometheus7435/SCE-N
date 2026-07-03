@@ -4,8 +4,6 @@
 			     ("nongnu" . "https://elpa.nongnu.org/nongnu/")
 			     )
 	  )
-			     ;; ("dnd" . "~/DND/")))
-
 ;    (package-initialize)
 
 (when (not (package-installed-p 'use-package))
@@ -39,6 +37,9 @@
 	calendar-location-name "")
 
 (global-hl-line-mode 1)
+
+(setq display-line-numbers-type `relative)
+(global-display-line-numbers-mode 1)
 
 (setq inhibit-startup-message t)
  (tool-bar-mode 0)
@@ -85,10 +86,6 @@
 (setq zb/default-font-size 12)
 (setq zb/current-font-size zb/default-font-size)
 
-(setq frame-title-format (system-name))
-;  (setq frame-title-format "%b")
-  ;; (setq frame-title-format '((:eval (projectile-project-name))))
-
 (prefer-coding-system 'utf-8)
 (set-default-coding-systems 'utf-8)
 (set-terminal-coding-system 'utf-8)
@@ -103,14 +100,7 @@
 (setq backup-directory-alist '(("." . "~/.config/emacs/backups")))
 (setq backup-by-copying t)
 
-(cond
-     ((string-equal system-type "windows-nt")
-	(defvar sync_folder "C:/Users/zacha/sync/"))
-     (
-	(if my-laptop-p (string-equal system-type "gnu/linux")
-	 (defvar sync_folder "~/Sync/"))
-)
-     )
+(defvar sync_folder "~/Sync/")
 (defvar nix_folder "~/.SCE-N/")
 
 (defun zb/visit-emacs-config ()
@@ -144,9 +134,6 @@
 			     (?\" . ?\")
 			     ))
 (setq electric-pair-inhibit-predicate (lambda (c) (char-equal c ?<)))
-;; (setq electric-pair-inhibit-predicate
-;;     `(lambda (c)
-;;        (if (char-equal c ?<) t (,electric-pair-inhibit-predicate c)))))
 
 (electric-pair-mode t)
 (show-paren-mode 1)
@@ -164,6 +151,14 @@
 (use-package expand-region
   :ensure t
   :bind ("C-q" . er/expand-region))
+
+(use-package yasnippet
+    :ensure t
+    :config
+      (use-package yasnippet-snippets
+	:ensure t)
+      (yas-reload-all))
+(yas-global-mode t)
 
 (setq org-fontify-done-headline t)
 (custom-set-faces
@@ -257,14 +252,6 @@
 ;;    '(("bl" "Book log" item (function org-books-visit-book-log)
 ;;        "- %U %?" :prepend t)))
 
-(use-package yasnippet
-    :ensure t
-    :config
-      (use-package yasnippet-snippets
-	:ensure t)
-      (yas-reload-all))
-(yas-global-mode t)
-
 (use-package flycheck
   :ensure t)
 
@@ -307,6 +294,8 @@
 
 ;; Silence compiler warnings as they can be pretty disruptive
 (setq comp-async-report-warnings-errors nil)
+
+
 
 (use-package lsp-mode
     :ensure t

@@ -13,5 +13,6 @@
     fortune
     cmatrix
     # csol
+    ttyper
   ];
 }
