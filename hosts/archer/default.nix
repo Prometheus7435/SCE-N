@@ -22,6 +22,7 @@ in
     # ../_mixins/services/nfs/client.nix
     ../../traits/mobile.nix
     ../../traits/silly.nix
+    ../../traits/steam.nix # all the games
 
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
