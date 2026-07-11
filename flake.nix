@@ -29,6 +29,11 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    # fin-overlay = {
+    #   url = https://tangled.org/tsiry-sandratraina.com/fin/blob/main/flake.nix;
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    #   inputs.home-manager.follows = "home-manager";
+    # };
     # NUR
     # needed for vdhcoapp
     # nur.url = "github:nix-community/NUR";

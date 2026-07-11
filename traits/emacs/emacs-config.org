@@ -2,6 +2,11 @@
 #+PROPERTY: header-args:emacs-lisp :tangle yes
 
 * Start-Up Procedure
+** Lexical bindings
+#+begin_src emacs-lisp
+  ;;; ...  -*- lexical-binding: t -*-
+#+end_src
+
 ** Repositories
 #+begin_src emacs-lisp
     (require 'package)

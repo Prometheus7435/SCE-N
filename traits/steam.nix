@@ -24,10 +24,10 @@
   # Allows games to temporarily set optimizations while you're playing
   programs.gamemode.enable = true;
 
-  environment.systemPackages = {
+  environment.systemPackages = [
     pkgs.steamcmd
     pkgs.steam-tui
-  };
+  ];
 
   # Graphics setting to help prevent startup issues
   hardware = {

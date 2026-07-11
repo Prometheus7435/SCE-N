@@ -68,6 +68,10 @@ in
     # profile-sync-daemon # for putting firefox data into ram
 
     wiki-tui
+
+    mpv
+    # fin
+    freecad
   ];
 
   hardware = {
