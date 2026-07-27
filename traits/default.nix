@@ -17,6 +17,7 @@
     binutils
     cpufrequtils  # allows turboing on cpu cores
     curl
+    fastfetch
     file
     git
     gpart
@@ -27,23 +28,14 @@
     libgccjit
     lf
     man-pages
-    nano
     pciutils
     rar
     rsync
     unzip
     unrar
-    usbutils
+    usbutils # Tools for working with USB devices, such as lsusb
     wget
     yt-dlp
-
-    # emacs requirements
-    # texlive.# commentmbined.scheme-full
-    # nixfmt-classic
-    ispell
-    aspell
-    black
-    python313Packages.jedi
   ];
 
   programs = {

@@ -22,7 +22,9 @@ in
     # ../_mixins/services/nfs/client.nix
     ../../traits/mobile.nix
     ../../traits/silly.nix
+    ../../traits/creative.nix
     ../../traits/steam.nix # all the games
+    ../../traits/yubikey.nix
 
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -48,22 +50,9 @@ in
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 
   environment.systemPackages = with pkgs; [
-    fastfetch
-
-    # Yubikey
-    yubikey-agent
-    yubikey-manager
-    yubikey-personalization
-    libfido2
-    pam_u2f
-    gnupg
-    pinentry-all
-    opensc
-    pcsclite
-    pcsc-tools
-
-
     prusa-slicer
+    orca-slicer
+
     transmission_4-gtk
     # profile-sync-daemon # for putting firefox data into ram
 
@@ -71,7 +60,7 @@ in
 
     mpv
     # fin
-    freecad
+
   ];
 
   hardware = {

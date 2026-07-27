@@ -25,8 +25,8 @@
   programs.gamemode.enable = true;
 
   environment.systemPackages = [
-    pkgs.steamcmd
-    pkgs.steam-tui
+    # pkgs.steamcmd
+    # pkgs.steam-tui
   ];
 
   # Graphics setting to help prevent startup issues

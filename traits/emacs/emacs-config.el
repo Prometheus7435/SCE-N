@@ -54,6 +54,8 @@
 ;    (set-fringe-mode 10)
  (setq visible-bell t)
 
+(display-battery-mode t)
+
 (setq-default cursor-type 'box)
 
 (setq display-time-24hr-format nil)
