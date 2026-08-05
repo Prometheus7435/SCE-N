@@ -55,6 +55,11 @@
     pkgs.thunderbird
     # pkgs.calibre
     # pkgs.vdhcoapp # to get it to work, you need to run path/to/net.downloadhelper.coapp install --user
+
+    # usb hid stuff. usbutils is located in traits default.nix file
+    pkgs.hidapi
+    pkgs.gusb
+
   ];
 
   hardware = {

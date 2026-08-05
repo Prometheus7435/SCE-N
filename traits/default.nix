@@ -2,7 +2,7 @@
 {
   imports = [
     # ./console
-    ./emacs
+    # ./emacs
     # ./fish.nix
     # ./git.nix
     ./locale.nix

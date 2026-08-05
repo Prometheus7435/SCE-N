@@ -63,7 +63,7 @@
 
 (display-time-mode 1)
 
-(load-theme 'modus-vivendi-deuteranopia t)
+(load-theme 'batppuccin-mocha t)
 
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)

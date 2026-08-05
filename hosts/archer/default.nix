@@ -20,6 +20,8 @@ in
     ./disks.nix
     # ../traits/desktop/${desktop}.nix
     # ../_mixins/services/nfs/client.nix
+    ../../traits/emacs
+
     ../../traits/mobile.nix
     ../../traits/silly.nix
     ../../traits/creative.nix
@@ -60,7 +62,11 @@ in
 
     mpv
     # fin
+    tor-browser
 
+    # comic-mandown
+
+    calibre
   ];
 
   hardware = {
