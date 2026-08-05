@@ -88,10 +88,6 @@ in
     #     STOP_CHARGE_THRESH_BAT0 = "95";
     #   };
     # };
-
-    # fingerprint reader
-    # fprintd.enable = true;
-
   };
   security = {
     pam.services.login.fprintAuth = true;
@@ -106,7 +102,7 @@ in
     hostId = hostid;
     useDHCP = lib.mkDefault true;
     firewall = {
-      enable = false;
+      enable = true;
         # allowedTCPPorts = [ 80 443 ];
         # allowedUDPPortRanges = [
         #   { from = 4000; to = 4007; }
