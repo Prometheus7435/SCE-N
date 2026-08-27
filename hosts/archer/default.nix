@@ -67,6 +67,13 @@ in
     # comic-mandown
 
     calibre
+
+    proton-vpn
+
+    android-tools
+
+    aerc # TUI email client
+    himalaya # TUI email client
   ];
 
   hardware = {
@@ -75,6 +82,9 @@ in
       iio = {
         enable = true;
       };
+    };
+    graphics = {
+      enable = true;
     };
   };
 
@@ -102,7 +112,7 @@ in
     hostId = hostid;
     useDHCP = lib.mkDefault true;
     firewall = {
-      enable = true;
+      enable = false;
         # allowedTCPPorts = [ 80 443 ];
         # allowedUDPPortRanges = [
         #   { from = 4000; to = 4007; }
@@ -111,4 +121,5 @@ in
     };
   };
 
+  users.users.${username}.extraGroups = ["adbusers"];
 }

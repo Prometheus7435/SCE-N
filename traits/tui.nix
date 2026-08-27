@@ -6,19 +6,19 @@
   ];
 
   environment.systemPackages = [
-    # pkgs.ytui-music
-    # pkgs.ueberzugpp
-    pkgs.ytfzf
-    # pkgs.lynx
-    # pkgs.tmuxPlugins.resurrect
-    pkgs.wiki-tui
-    pkgs.lf
-    pkgs.ttyper
     # pkgs.jellyfin-tui
+    # pkgs.lynx
     # pkgs.meli
     # pkgs.neomutt
-    # pkgs.himalaya
-    # pkgs.steamcmd
     # pkgs.steam-tui
+    # pkgs.steamcmd
+    # pkgs.tmuxPlugins.resurrect
+    # pkgs.ueberzugpp
+    # pkgs.ytui-music
+    pkgs.himalaya
+    pkgs.lf
+    pkgs.ttyper
+    pkgs.wiki-tui
+    pkgs.ytfzf
   ];
 }

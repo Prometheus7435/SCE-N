@@ -24,15 +24,15 @@
       # croc                          # Terminal file transfer
       # curlie                        # Terminal HTTP client
       # dconf2nix                     # Nix code from Dconf files
-      deadnix                       # Code lint Nix
+      # deadnix                       # Code lint Nix
       # debootstrap                   # Terminal Debian installer
       diffr                         # Modern Unix `diff`
       difftastic                    # Modern Unix `diff`
       # distrobox                     # Terminal container manager
       # dive                          # Container analyzer
-      doggo                        # Modern Unix `dig`, switched from dogds as that is unmaintained
+      doggo                         # Modern Unix `dig`, switched from dogds as that is unmaintained
       duf                           # Modern Unix `df`
-      dust                       # Modern Unix `du`
+      dust                          # Modern Unix `du`
       entr                          # Modern Unix `watch`
       fd                            # Modern Unix `find`
       # ffmpeg-headless               # Terminal video encoder
