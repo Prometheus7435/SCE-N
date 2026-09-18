@@ -22,7 +22,7 @@ in
     # ../_mixins/services/nfs/client.nix
     ../../traits/emacs
 
-    ../../traits/mobile.nix
+    ../../traits/hardware/mobile.nix
     ../../traits/silly.nix
     ../../traits/creative.nix
     ../../traits/steam.nix # all the games
