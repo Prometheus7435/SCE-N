@@ -63,7 +63,7 @@
 
 (display-time-mode 1)
 
-(load-theme 'batppuccin-mocha t)
+(load-theme 'kaolin-dark t)
 
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)

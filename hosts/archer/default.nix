@@ -74,6 +74,8 @@ in
 
     aerc # TUI email client
     himalaya # TUI email client
+
+    lufus
   ];
 
   hardware = {
