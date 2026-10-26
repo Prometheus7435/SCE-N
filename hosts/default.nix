@@ -60,26 +60,7 @@
       timeout = 10;
     };
 
-    # initrd = {
-    #   availableKernelModules = [
-    #     "ahci"
-    #     "ehci_pci"
-    #     "mpt3sas"
-    #     "nvme"
-    #     "rtsx_pci_sdmmc"
-    #     "usb_storage"
-    #     "usbhid"
-    #     "virtio_balloon"
-    #     "virtio_blk"
-    #     "virtio_pci"
-    #     "virtio_ring"
-    #     "xhci_pci"
-    #   ];
-    #   kernelModules = [
-
-    #   ];
     };
-# };
 
   hardware = {
     bluetooth.enable = true;

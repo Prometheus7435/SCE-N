@@ -29,7 +29,7 @@
         };
         user = {
           Name = "Zach Bombay";
-          Email = "zacharybombay@gmail.com";
+          Email = "Prometheus7435@yahoo.com";
         };
 
 #      extraConfig = {

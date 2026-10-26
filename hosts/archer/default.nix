@@ -28,6 +28,8 @@ in
     ../../traits/steam.nix # all the games
     ../../traits/yubikey.nix
 
+    ../../traits/syncthing.nix
+
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
@@ -38,6 +40,18 @@ in
     # extraModulePackages = with config.boot.kernelPackages; [
     #   # acpi_call
     # ];
+    zswap = {
+      enable = true;
+      # And optionally configure further:
+      maxPoolPercent = 50;
+      shrinkerEnabled = true;
+      compressor = "zstd";
+      acceptThresholdPercent = 80;
+    };
+    # zramSwap = {
+    #   enable = true;
+    #   memoryPercent = 50;
+    # };
   };
 
   swapDevices = [ ];
@@ -75,7 +89,15 @@ in
     aerc # TUI email client
     himalaya # TUI email client
 
-    lufus
+#    lufus
+    ollama
+    dos2unix
+    opencode
+
+    tio
+    screen
+    minicom
+
   ];
 
   hardware = {

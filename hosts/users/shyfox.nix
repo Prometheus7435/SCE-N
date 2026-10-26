@@ -14,6 +14,7 @@ in
     description = "Zach";
     extraGroups = [
         "audio"
+        "dialout"
         "disk"
         "input"
         "network"
@@ -22,6 +23,7 @@ in
         "users"
         "video"
         "wheel"
+        "uucp"    # Used by some serial drivers/distros
       ]
       ++ ifExists [
         "docker"
@@ -39,4 +41,19 @@ in
     shell = pkgs.fish;
   };
   programs.fish.enable = true;
+
+  services.udev.extraRules = ''
+    # CP210x USB to UART Bridge (Common on Official DevKits)
+    SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", MODE="0666", GROUP="dialout"
+
+    # CH340/CH341 USB to UART (Common on cheap clones)
+    SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="0666", GROUP="dialout"
+
+    # FTDI USB to UART
+    SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", MODE="0666", GROUP="dialout"
+
+    # Generic fallback for any USB serial device
+    KERNEL=="ttyUSB*", MODE="0666", GROUP="dialout"
+    KERNEL=="ttyACM*", MODE="0666", GROUP="dialout"
+  '';
 }

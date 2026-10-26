@@ -5,7 +5,7 @@
 
   programs.tmux = {
     enable = true;
-    # shortcut = "b";
+    shortcut = "t";
     # aggressiveResize = true; -- Disabled to be iTerm-friendly
     clock24 = true;
     baseIndex = 1;
@@ -48,11 +48,12 @@
       set -g @catppuccin_window_status_style "rounded" # basic, rounded, slanted, custom, or none
 
      # Change prefix from 'Ctrl+b' to 'Ctrl+t'
-      unbind C-b
-      set-option -g prefix C-t
-      bind-key C-t send-prefix
+#      unbind C-b
+#      set-option -g prefix C-t
+#      bind-key C-t send-prefix
 
       # Add battery
+#      run-shell ~/clone/path/battery.tmux
       # set -g status-right 'Batt: #{battery_icon} #{battery_percentage} #{battery_remain} | %a %h-%d %H:%M '
       # blank copy from example
       # set -g status-right "Icon: #{battery_icon} | #{battery_icon_charge} | Status: #{battery_icon_status} | Per: #{battery_percentage}"
@@ -69,10 +70,14 @@
       #tmux_conf_battery_status_charging="🔌"     # U+1F50C
       #tmux_conf_battery_status_discharging="🔋"  # U+1F50B
 
-      tmux_conf_theme_status_right=" #{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
+#      tmux_conf_theme_status_right=" #{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} , %R , %d %b | #{username}#{root} | #{hostname} "
 
-      # set -g status-right "Icon: #{battery_icon} | Charge Icon: #{battery_icon_charge} | Status Icon: #{battery_icon_status} | Percent: #{battery_percentage} | Remain: #{battery_remain}"
-      # set -g status-right-length '100'
+#      set -g status-right 'Batt: #{battery_icon} #{battery_percentage} #{battery_remain} | %a %h-%d %H:%M '
+#      set -g status-right "Icon: #{battery_icon} | Charge Icon: #{battery_icon_charge} | Status Icon: #{battery_icon_status} | Percent: #{battery_percentage} | Remain: #{battery_remain}"
+#      set -g status-right-length '100'
+
+#      set -g status-right 'Battery: #{battery_percentage} #{battery_icon} | %H:%M'
+      set -g status-right '#{battery_color_bg} Batt: #{battery_icon} #{battery_percentage} #{battery_remain} | %H:%M %a %d-%h'
     '';
   };
 }

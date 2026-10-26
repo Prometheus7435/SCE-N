@@ -50,9 +50,11 @@
     kdePackages.kdecoration
     kdePackages.kdeplasma-addons
     kdePackages.kfind
+    kdePackages.krunner
     kdePackages.okular
     kdePackages.plasma-integration
     kdePackages.plasma-pa
+    kdePackages.plasma-workspace
     kdePackages.qtstyleplugin-kvantum
     kdePackages.xdg-desktop-portal-kde
     kdePackages.yakuake
