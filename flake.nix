@@ -29,6 +29,7 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    hermes-agent.url = "github:NousResearch/hermes-agent";
     # fin-overlay = {
     #   url = https://tangled.org/tsiry-sandratraina.com/fin/blob/main/flake.nix;
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +46,7 @@
       home-manager,
       nixos-hardware,
       emacs-overlay,
+      hermes-agent,
       disko,
       ...
   }@inputs:

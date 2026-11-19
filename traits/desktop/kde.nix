@@ -25,8 +25,8 @@
 
     xserver = {
       enable = true;
-      xkb.layout = "us";
-      xkb.options = "grp:win_space_toggle";
+    #   xkb.layout = "us";
+    #   xkb.options = "grp:win_space_toggle";
     };
   };
 

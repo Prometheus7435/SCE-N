@@ -28,7 +28,7 @@ in
     ../../traits/steam.nix # all the games
     ../../traits/yubikey.nix
 
-    ../../traits/syncthing.nix
+#    ../../traits/syncthing.nix
 
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
@@ -87,7 +87,7 @@ in
     android-tools
 
     aerc # TUI email client
-    himalaya # TUI email client
+#    himalaya # TUI email client
 
 #    lufus
     ollama
@@ -99,6 +99,12 @@ in
     minicom
 
   ];
+
+  services.hermes-agent = {
+    container.enable = true;
+    container.hostUsers = [ ${username} ];
+    addToSystemPackages = true;
+  };
 
   hardware = {
     sensor = {

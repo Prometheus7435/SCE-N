@@ -95,11 +95,13 @@
   };
   environment.systemPackages = with pkgs; [
     # emacs requirements
-    # texlive.# commentmbined.scheme-full
+    texliveFull# commentmbined.scheme-full
+    miktex
     # nixfmt-classic
     ispell
     aspell
     black
     python313Packages.jedi
+    # pdflatex
   ];
 }
